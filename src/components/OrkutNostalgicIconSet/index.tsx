@@ -6,7 +6,7 @@ interface OrkutNostalgicIconSetProps {
   icon: string;
 }
 
-export function OrkutNostalgicIconSet(props: OrkutNostalgicIconSetProps) {
+export function OrkutNostalgicIconSet() {
   return (
     <List>
       {[
@@ -22,7 +22,7 @@ export function OrkutNostalgicIconSet(props: OrkutNostalgicIconSetProps) {
           </span>
           <span className="OrkutNostalgicIconSet__number" style={{ gridArea: 'number' }}>
             <img key={`orkut__icon_set__${slug}_img`} className="OrkutNostalgicIconSet__iconSample" src={`/${icon}.svg`} />
-            {props[slug] ? props[slug] : 0}
+            {[slug] ? [slug] : 0}
           </span>
         </li>
       ))}
@@ -31,7 +31,8 @@ export function OrkutNostalgicIconSet(props: OrkutNostalgicIconSetProps) {
         { name: 'Legal', slug: 'legal', icon: 'cool' },
         { name: 'Sexy', slug: 'sexy', icon: 'heart' },
       ].map(({ name, slug, icon }) => {
-        const total = props[slug] ? props[slug] : 2;
+        // const total = props[slug] ? props[slug] : 2;
+        const total = 2
         return (
           <li key={`orkut__icon_set__${slug}`}>
             <span className="OrkutNostalgicIconSet__title">
